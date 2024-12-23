@@ -330,7 +330,7 @@ function handleCheckboxChange() {
 				localStorage.removeItem('launchType');
 				localStorage.removeItem('blob');
 				localStorage.removeItem('aboutBlank');
-				window.open('/settings.html/#/blank');
+				window.open('/~/#/blank');
 				window.close();
 				const urlMap = {
 					'None (Default)': 'https://google.com',
