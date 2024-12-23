@@ -4,9 +4,6 @@
 	<head>
 		<title>Pete Zah Games</title>
 		<link rel="icon" type="icon/x-icon" href="/assets/favicon.ico" />
-		<script src="/baremux/index.js"></script>
-		<script src="/static/uv/uv.bundle.js"></script>
-		<script src="/static/uv/uv.config.js"></script>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta charset="UTF-8" />
@@ -211,14 +208,26 @@
 					class="search-header"
 					style="flex-grow: 1; margin-left: 8px; margin-right: 8px"
 				>
+					<div id="search-container">
+					<form id="uv-form">
+						<input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/>
+            
 					<input
 						placeholder="Enter search or web address"
 						class="search-header__input"
-						id="gointospace2"
+						id="uv-address"
 						type="text"
 						style="flex-grow: 1"
 					/>
+
+						<div class="desc left-margin">
+                                                <p id="uv-error"></p>
+                                                <pre id="uv-error-code"></pre>
+                                            </div>
+                                        </div>
+					
 					<div class="webSecurityIcon"></div>
+					
 					<button
 						aria-label="search"
 						style="
@@ -480,6 +489,12 @@
 		<script src="/storage/js/p.js"></script>
 		<script src="/storage/js/proxy.js"></script>
 		<script src="/storage/js/themes.js"></script>
+		<script src="/static/uv/uv.bundle.js" defer></script>
+                <script src="/static/uv/uv.config.js" defer></script>
+                <script src="/static/register-sw.js" defer></script>
+                <script src="/static/search.js" defer></script>
+                <script src="/static/index.js" defer></script>
+
 		<script>
 			let CLF_config = {
 				app_id: '163a312a-7cde-41ab-a80c-cb4cf281efdf',
