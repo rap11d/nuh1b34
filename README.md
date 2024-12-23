@@ -1,3 +1,3 @@
 # Outinspace
 
-<a href="https://example.com/my-txt-file.txt">Click here</a>
+<a href="https://petezahv4.github.io">Click here</a>
