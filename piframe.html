@@ -61,38 +61,54 @@
 	</head>
 
 	<body style="overflow: hidden">
-		<h1 style="margin: 0; padding-top: 40px;">Pete Zah</h1>
-    <p id="dynamicParagraph">gyatt</p>
-
-    <div id="search-container">
-        <form id="uv-form">
-            <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/>
-            <input id="uv-address" type="text" class="search-bar-home" placeholder="Start by inputting a link or searching with UV..." />
-            <button class="search-button" onclick="submitSearch()">SEARCH <i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
-
-            
-         
-        <div class="desc left-margin">
-            <p id="uv-error"></p>
-            <pre id="uv-error-code"></pre>
-        </div>
-    </div>
-
-        <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-        <a href="/static/embed.html#https://tiktok.com" style="display: inline-block;">
-            <img src="/load/storage/load/tiktok/IMG_5335.png" style="width: 30px; height: 30px; border-radius: 50%; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
-        </a>
-        <a href="/static/embed.html#https://twitch.tv" style="display: inline-block;">
-            <img src="/load/storage/load/twitch/IMG_5336.png" style="width: 30px; height: 30px; border-radius: 50%; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
-        </a>
-        <a href="/static/embed.html#https://google.com" style="display: inline-block;">
-            <img src="/load/storage/load/google/IMG_5324.webp" style="width: 30px; height: 30px; border-radius: 50%; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
-        </a>
-        <a href="/static/embed.html#https://now.gg" style="display: inline-block;">
-            <img src="/load/storage/load/nowgg/IMG_5325.png" style="width: 30px; height: 30px; border-radius: 50%; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
-        </a>
-    </div>
+		<div class="header">
+			<div
+				style="
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					margin: 20px;
+					margin-left: 5vw;
+					width: 100vw;
+				"
+			>
+				<div
+					style="animation: fade-in-top 1s; margin-top: -150px"
+					class="search-header"
+				>
+					<img src="/load/storage/load/google/IMG_5324.webp" class="searchEngineIcon" />
+					<form id="uv-form">
+						<input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/>
+						<input
+							id="uv-address"
+							placeholder="Search Pete Zah..."
+							class="search-header__input"
+							type="text"
+						/>
+						<button
+							aria-label="search"
+							type="submit"
+							class="search-header__button gointospaceSearchButton"
+						>
+							<svg
+								fill="none"
+								viewBox="0 0 18 18"
+								height="18"
+								width="18"
+								class="search-header__icon"
+							>
+								<path
+									fill="#3A3A3A"
+									d="M7.132 0C3.197 0 0 3.124 0 6.97c0 3.844 3.197 6.969 7.132 6.969 1.557 0 2.995-.49 4.169-1.32L16.82 18 18 16.847l-5.454-5.342a6.846 6.846 0 0 0 1.718-4.536C14.264 3.124 11.067 0 7.132 0zm0 .82c3.48 0 6.293 2.748 6.293 6.15 0 3.4-2.813 6.149-6.293 6.149S.839 10.37.839 6.969C.839 3.568 3.651.82 7.132.82z"
+								></path>
+							</svg>
+						</button>
+					</form>
+				</div>
+				<div style="margin-left: 1.5vw" class="shortcuts"></div>
+				<div style="margin-left: 3.5vw" class="shortcutsBig"></div>
+			</div>
+		</div>
 		
 		<script src="/storage/js/localforage.min.js"></script>
 		<script src="/storage/js/json-loader.js"></script>
