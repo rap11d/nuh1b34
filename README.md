@@ -1,3 +1,19 @@
-# Outinspace
+# Pete Zah Games
+A unblocked gaming site for you that self hosts over 200+ games from reliable sources.
 
-<a href="https://petezahv4.github.io/p2.html">Click here</a>
+
+## Pete Zah Games Purpose?
+We are mainly a service that provides games completely self hosted but we also have a proxy!
+
+You're mainly supposed to use our site at places that have restrictions.
+
+## Pete Zah Games Sourced
+- Our biggest contributer is Brunysixlwork:  He provided help with styling and the proxy
+- We use Szvy Central's proxy server
+- We use games from Math 66 Games and the old Selenete.cc
+- We owe our now.gg app and games to Frogie's Arcade
+
+## Summary
+Pete Zah Games is a unblocked games and proxy service meant for you to use at school or work but you can use it at home to. Pete Zah Games provides many games which are all self hosted meaning all content is stored in the website.
+
+
