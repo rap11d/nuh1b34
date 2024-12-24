@@ -169,29 +169,6 @@
 				</div>
 		
 
-		<div class="settingsection settingsection1 no-animation2" style="animation-delay: 0.2s; position: relative;">
-					<h1>Automatic cloaking</h1>
-					<p>
-						This toggles automatic cloaking when the site first
-						loads which hides the site from entering your history.
-					</p>
-					<p>
-						<b>Note: Only one automatic cloaking toggle is allowed
-							at a time.</b>
-					</p>
-					<hr>
-					<p>Auto-Launch About:Blank</p>
-					<label class="switch">
-						<input class="checkbox checkbox-blob-aboutBlank autoLaunchAboutBlank" type="checkbox">
-						<span class="slider round"></span>
-					</label>
-					<p>Auto-Launch Blob</p>
-					<label class="switch">
-						<input class="checkbox checkbox-blob-aboutBlank autoLaunchBlob" type="checkbox">
-						<span class="slider round"></span>
-					</label>
-				</div>
-
 		<div class="settingsection settingsection1 no-animation2" style="animation-delay: 0.3s; position: relative;">
 					<h1>Tab Cloaking</h1>
 					<p>
@@ -228,9 +205,10 @@
 							<rect x="2" y="2" width="20" height="20" rx="3" ry="3" fill="none" stroke-linejoin="round" stroke-linecap="round"></rect>
 							<line x1="8" y1="16" x2="16" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></line>
 						</svg>
-						<input class="password panicKey" placeholder="Set a keybind. Backtick by default">
+						<input class="password panicKey" id="panicKey" placeholder="Set a keybind. Backtick by default">  
+						<input class="sigma" type="url" id="panicUrl" placeholder="https://www.desmos.com/scientific" type="hidden">
 					</div>
-					<button style="width: 300px" class="buttonreg panicKeySave">
+					<button style="width: 300px" class="buttonreg panicKeySave" onclick="saveSettings()">
 						Save
 					</button>
 				</div>
