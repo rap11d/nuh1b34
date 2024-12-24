@@ -134,123 +134,20 @@
 			</li>
 		</ul>
 
-		
-			<ul class="sideSnav">
-				<h1>Settings</h1>
-				<div id="settingsShape" class="settingsShape"></div>
-				<a href="/settings/#/blank">
-					<li class="settingItem" >
-						<span class="material-symbols-outlined"
-							>ad_group_off</span
-						>Cloaking
-					</li>
-				</a>
-				<a href="/settings/#/plugins">
-					<li class="settingItem" >
-						<span class="material-symbols-outlined">crossword</span
-						>Plugins
-						<span
-							style="
-								background-color: #6b6b6b63;
-								color: rgba(255, 255, 255, 0.48);
-								border-radius: 30px;
-								padding: 1px 7px;
-								font-size: 12px;
-								margin-left: 4px;
-								transform: translateY(1px);
-							"
-							>Coming Soon</span
-						>
-					</li>
-				</a>
-				<!--
-				<a href="/settings/#/customkey">
-					<li class="settingItem" >
-						<span class="material-symbols-outlined"
-							>deployed_code</span
-						>Bindable Keybind
-					</li>
-				</a>
-			-->
-				<a href="/settings/#/performance">
-					<!-- Bindable, programmable, set-able?-->
-					<li class="settingItem" >
-						<span class="material-symbols-outlined">speed</span
-						>Performance
-					</li>
-				</a>
-				<a href="/settings/#/themes">
-					<li class="settingItem" >
-						<span class="material-symbols-outlined">palette</span
-						>Themes
-					</li>
-				</a>
-				<a href="/settings/#/proxy">
-					<li class="settingItem" >
-						<span class="material-symbols-outlined">public</span
-						>Proxy & Browser
-					</li>
-				</a>
-				<a href="/settings/#/ads">
-					<li class="settingItem" >
-						<span class="material-symbols-outlined">ads_click</span
-						>Advertising
-					</li>
-				</a>
-				<hr style="margin-bottom: 20px" />
-				<a href="/settings/#/account">
-					<li class="settingItem" >
-						<span class="material-symbols-outlined"
-							>account_circle</span
-						>Account
-					</li>
-				</a>
-				<a href="/settings/#/about">
-					<li class="settingItem" >
-						<span class="material-symbols-outlined">help</span>About
-						& Statistics
-					</li>
-				</a>
-				<hr style="margin-bottom: 20px" />
-				<a href="/settings/#/news">
-					<li class="settingItem" >
-						<span class="material-symbols-outlined"
-							>rocket_launch</span
-						>News & Updates
-					</li>
-				</a>
-				<a href="/settings/#/faq">
-					<li class="settingItem" >
-						<span class="material-symbols-outlined"
-							>contact_support</span
-						>FAQ
-					</li>
-				</a>
-			</ul>
-			
-			<div class="scontent" >
-				<h1 style="animation: fade-in-left 1s" class="settingsection1">
-					Cloaking
-				</h1>
-				<div class="settingsection settingsection1">
-					<h1>About:Blank & Blob Cloaking</h1>
+		<div class="settingsection settingsection1 no-animation2" style="animation-delay: 0.1s;">
+					<h1>About:Blank &amp; Blob Cloaking</h1>
 					<p>
 						About:Blank allows you to hide your tab history, and
 						blockers such as GoGuardian by appearing that you are on
 						a blank tab. If About:Blank doesn't work, then you can
 						try using the blob cloaking which uses temporary data.
 					</p>
-					<div
-						style="
+					<div style="
 							width: 100%;
 							display: flex;
 							justify-content: space-between;
-						"
-					>
-						<button
-							class="splitbutton"
-							onclick="launchAboutBlank()"
-						>
+						">
+						<button class="splitbutton" onclick="launchAboutBlank()">
 							Launch About:Blank
 						</button>
 						<button class="splitbutton" onclick="launchBlob()">
@@ -258,56 +155,45 @@
 						</button>
 					</div>
 				</div>
-				<div class="settingsection settingsection1">
+
+		<div class="settingsection settingsection1 no-animation2" style="animation-delay: 0.2s;">
 					<h1>Automatic cloaking</h1>
 					<p>
 						This toggles automatic cloaking when the site first
 						loads which hides the site from entering your history.
 					</p>
 					<p>
-						<b
-							>Note: Only one automatic cloaking toggle is allowed
-							at a time.</b
-						>
+						<b>Note: Only one automatic cloaking toggle is allowed
+							at a time.</b>
 					</p>
-					<hr />
+					<hr>
 					<p>Auto-Launch About:Blank</p>
 					<label class="switch">
-						<input
-							class="checkbox checkbox-blob-aboutBlank autoLaunchAboutBlank"
-							type="checkbox"
-						/>
+						<input class="checkbox checkbox-blob-aboutBlank autoLaunchAboutBlank" type="checkbox">
 						<span class="slider round"></span>
 					</label>
 					<p>Auto-Launch Blob</p>
 					<label class="switch">
-						<input
-							class="checkbox checkbox-blob-aboutBlank autoLaunchBlob"
-							type="checkbox"
-						/>
+						<input class="checkbox checkbox-blob-aboutBlank autoLaunchBlob" type="checkbox">
 						<span class="slider round"></span>
 					</label>
 				</div>
 
-				<div class="settingsection settingsection1">
+		<div class="settingsection settingsection1 no-animation2" style="animation-delay: 0.3s;">
 					<h1>Tab Cloaking</h1>
 					<p>
-						Tab Cloaking cloaks the name of the tab & icon, so your
+						Tab Cloaking cloaks the name of the tab &amp; icon, so your
 						tab stays hidden from sight. Select a cloak down below
 						to activate it.
 					</p>
-					<div class="dropdown dropdown-memory" ">
+					<div class="dropdown dropdown-memory" id="tabCloak">
 						<button class="dropdown-button dropdown-toggle">
-							<span class="dropdown-selected"
-								>None (default)</span
-							>
-							<span class="material-symbols-outlined"
-								>chevron_right</span
-							>
+							<span class="dropdown-selected">None (Default)</span>
+							<span id="arrow" class="material-symbols-outlined">chevron_right</span>
 						</button>
 						<ul class="dropdown-menu">
 							<li class="hidden">None (Default)</li>
-							<li>Desmos</li>
+							<li class="second-to-first-conditional">Desmos</li>
 							<li>Google Classroom</li>
 							<li>Google Drive</li>
 							<li>Khan Academy</li>
@@ -316,10 +202,8 @@
 						</ul>
 					</div>
 				</div>
-				<div
-					style="z-index: 998"
-					class="settingsection settingsection1"
-				>
+
+		<div style="z-index: 998; animation-delay: 0.4s;" class="settingsection settingsection1 no-animation2">
 					<h1 style="animation: fade-in-left 1s">Panic Key</h1>
 					<p>
 						Press the selected keybind to go to another site
@@ -327,45 +211,16 @@
 						them with a comma.
 					</p>
 					<div class="pgroup">
-						<svg
-							stroke="currentColor"
-							stroke-width="1.5"
-							viewBox="0 0 24 24"
-							xmlns="http://www.w3.org/2000/svg"
-							class="picon"
-						>
-							<rect
-								x="2"
-								y="2"
-								width="20"
-								height="20"
-								rx="3"
-								ry="3"
-								fill="none"
-								stroke-linejoin="round"
-								stroke-linecap="round"
-							></rect>
-							<line
-								x1="8"
-								y1="16"
-								x2="16"
-								y2="8"
-								stroke="currentColor"
-								stroke-width="1.5"
-								stroke-linejoin="round"
-								stroke-linecap="round"
-							></line>
+						<svg stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="picon">
+							<rect x="2" y="2" width="20" height="20" rx="3" ry="3" fill="none" stroke-linejoin="round" stroke-linecap="round"></rect>
+							<line x1="8" y1="16" x2="16" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></line>
 						</svg>
-						<input
-							class="password panicKey"
-							placeholder="Set a keybind. Backtick by default"
-						/>
+						<input class="password panicKey" placeholder="Set a keybind. Backtick by default">
 					</div>
 					<button style="width: 300px" class="buttonreg panicKeySave">
 						Save
 					</button>
 				</div>
-			</div>
 			
 		<div style="z-index: -998">
 			<div style="z-index: -998; position: fixed" class="blob"></div>
