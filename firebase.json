@@ -1,7 +1,6 @@
 "hosting": {
-  // ... other hosting settings
   "github": {
     "repo": "petezahv4/petezahv4.github.io",
-    "branch": "main" // or specify your desired branch
+    "branch": "main"
   }
 }
