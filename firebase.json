@@ -1,6 +1,10 @@
-"hosting": {
-  "github": {
-    "repo": "petezahv4/petezahv4.github.io",
-    "branch": "main"
+{
+  "hosting": {
+    "public": "/",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
   }
 }
