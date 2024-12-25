@@ -1,0 +1,22 @@
+name: Deploy to Firebase
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+
+      - name: Login to Firebase
+        run: firebase login --no-localhost
+
+      - name: Deploy to Firebase
+        run: firebase deploy --only hosting
