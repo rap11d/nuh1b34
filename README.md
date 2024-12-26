@@ -8,7 +8,8 @@ We are mainly a service that provides games completely self hosted but we also h
 You're mainly supposed to use our site at places that have restrictions.
 
 ## Pete Zah Games Sourced
-- Our biggest contributer is Brunysixlwork:  He provided help with styling and the proxy
+- Our biggest contributer is Space:  We use his styling
+- We use Bruny's static uv proxy setup
 - We use Szvy Central's proxy server
 - We use games from Math 66 Games and the old Selenete.cc
 - We owe our now.gg app and games to Frogie's Arcade
