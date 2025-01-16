@@ -127,7 +127,7 @@
                                                 </select>
 
 
-          <div class="container-iframe header-text myDivClass" >
+          <div class="container-iframe header-text InterIframe" >
         <div class="iframe-container">
             <iframe sandbox="allow-scripts allow-pointer-lock allow-forms allow-same-origin allow-downloads" id="myIframe" src="/storage/ag/a/interstellar"></iframe>
         </div>
@@ -219,15 +219,20 @@
   <script src="/storage/assets/js/login.js"></script>
 
   <script>
-const myDiv = document.querySelectorAll('.myDivClass a');
+    const iframe = document.getElementById('InterIframe');
+    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document; 
 
-myDiv.forEach(link => {
-  link.addEventListener('click', (event) => {
-    event.preventDefault(); // Prevent default link behavior
-    window.location.href = link.getAttribute('href'); 
-  });
-});
-</script>
+    iframeDoc.addEventListener('DOMContentLoaded', () => {
+      const buttons = iframeDoc.querySelectorAll('button');
+
+      buttons.forEach(button => {
+        button.addEventListener('click', (event) => {
+          event.preventDefault(); 
+          window.location.href = button.getAttribute('href'); 
+        });
+      });
+    });
+  </script>
 
   <script>
     let CLF_config = {
