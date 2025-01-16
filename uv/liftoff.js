@@ -3,7 +3,7 @@ self.__uv$config = {
     prefix: '/uv/service/ghost/',
 
     /* Bare server URL */ 
-    bare: 'https://scary.ax1951.com/bare/',
+    bare: 'https://e.kendimas.com/bare/',
     
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
