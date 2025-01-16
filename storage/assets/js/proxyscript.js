@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function formatSearch(query) {
     const engine = localStorage.getItem("engine");
     if (engine === null) {
-      localStorage.setItem("engine", "https://www.google.com/search?q=");
+      localStorage.setItem("engine", "https://duckduckgo.com/?q=");
     }
 
     try {
