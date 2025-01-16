@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       const query = formatSearch(input.value);
         localStorage.setItem("url", "/uv/service/ghost/" + __uv$config.encodeUrl(query));
-      window.location.href = "/p.html";
+      window.location.href = "/pages/proxy/p1.html";
     }
   }
 
