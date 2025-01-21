@@ -78,8 +78,9 @@
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Search End ***** -->
                     <div class="search-input">
-                      <form id="search" action="#">
-                        <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
+                      <form id="uv-form" action="#">
+			<input id="uv-search-engine" value="https://duckduckgo.com/?q=%s" type="hidden"/>
+                        <input type="text" placeholder="Search or enter a URL' name="searchKeyword" onkeypress="handle" />
                         <i class="fa fa-search"></i>
                       </form>
                     </div>
@@ -490,6 +491,11 @@
   <script src="storage/assets/js/custom.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   <script src="storage/assets/js/login.js"></script>
+  <script src="/static/uv/uv.bundle.js" defer></script>
+  <script src="/static/uv/uv.config.js" defer></script>
+  <script src="/static/register-sw.js" defer></script>
+  <script src="/static/search.js" defer></script>
+  <script src="/static/index.js" defer></script>
 
   <script>
     let CLF_config = {
