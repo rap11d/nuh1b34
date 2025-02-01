@@ -3,11 +3,13 @@
 // The second is hosted by me and is a backup, it is bare.petezahgames.com.
 // PeteZah has hid more, and vip's can gain access to websites that have these servers.  Email contact@petezahgames.com to find out.
 // bare-sigma.yourmom.eu.org is one that is blocked and yet works well.
-// https://v2202412246404304352.megasrv.de/bare/ works too.  Thanks Benrogo :)!!!
+// https://v2202412246404304352.megasrv.de/bare/ works too.  Owned by Szvy.
+// https://frog.vpn.net.br/bare/ works if the one above stop working.  Owned by Frogies.
+// Ben aura forevvvaaa :)!!!
 
 self.__uv$config = {
     prefix: '/static/ixl/',
-    bare:'https://frog.vpn.net.br/bare/',
+    bare:'https://v2202412246404304352.megasrv.de/bare/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/static/uv/uv.handler.js',
