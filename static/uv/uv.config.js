@@ -8,7 +8,7 @@
 // Ben aura forevvvaaa :)!!!
 
 self.__uv$config = {
-    prefix: '/static/ixl/',
+    prefix: '/static/petezah/',
     bare:'https://v2202412246404304352.megasrv.de/bare/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
