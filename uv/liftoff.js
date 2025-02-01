@@ -1,9 +1,10 @@
+// https://e.kendimas.com/bare/ works.
 
 self.__uv$config = {
     prefix: '/uv/service/ghost/',
 
     /* Bare server URL */ 
-    bare: 'https://e.kendimas.com/bare/',
+    bare: 'https://voidness.nunc.se/bare/',
     
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
