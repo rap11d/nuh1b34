@@ -9,7 +9,7 @@
 
 self.__uv$config = {
     prefix: '/static/petezah/',
-    bare:'https://v2202412246404304352.megasrv.de/bare/',
+    bare:'https://forkidz.hamrospace.com/bare/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/static/uv/uv.handler.js',
