@@ -9,7 +9,7 @@
 
 self.__uv$config = {
     prefix: '/static/petezah/',
-    bare:'https://forkidz.hamrospace.com/bare/',
+    bare:'https://frog.vpn.net.br/bare/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/static/uv/uv.handler.js',
