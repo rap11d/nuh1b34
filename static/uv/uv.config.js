@@ -6,11 +6,12 @@
 // https://v2202412246404304352.megasrv.de/bare/ works too.  Owned by Szvy.
 // https://szv.vpn.net.br/bare/ works too.  Owned by Szvy.
 // https://frog.vpn.net.br/bare/ works if the one above stop working.  Owned by Frogies.
+// https://petezahserver.ostrovsky.sk/bare/ LEZ GO IT IS UNBLOCKED
 // Ben aura forevvvaaa :)!!!
 
 self.__uv$config = {
     prefix: '/static/petezah/',
-    bare:'https://historicalfiction.vpn.net.br/bare/',
+    bare:' https://petezahserver.ostrovsky.sk/bare/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/static/uv/uv.handler.js',
