@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,174 +15,225 @@
     <meta name="keywords" content="Pete Zah Games, the next gen gaming site">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-            font-weight: bold;
-        }
-        body, html {
-            height: 100%;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-        .tabs {
-            display: flex;
-            align-items: center;
-            background-color: #222;
-            border-bottom: 2px solid #FFD700;
-            overflow: hidden;
-            white-space: nowrap;
-            transition: transform 0.5s ease-in-out;
-        }
-        .tab {
-            display: flex;
-            align-items: center;
-            padding: 5px 10px;
-            color: #ccc;
-            cursor: pointer;
-            position: relative;
-            background-color: #333;
-            border-right: 1px solid #555;
-            transition: background-color 0.3s;
-            flex-shrink: 1;
-            max-width: 150px;
-            overflow: hidden;
-            border-radius: 5px;
-            text-overflow: ellipsis;
-        }
-        .tab.active {
-            background-color: #444;
-            color: #FFD700;
-        }
-        .tab:hover {
-            background-color: #555;
-        }
-        .tab .close-button {
-            margin-left: 5px;
-            color: #ccc;
-            cursor: pointer;
-            font-size: 14px;
-        }
-        .tab .close-button:hover {
-            color: #262626;
-        }
-        .add-tab-button {
-            padding: 10px;
-            cursor: pointer;
-            background-color: #333;
-            color: #FFD700;
-            border: none;
-            outline: none;
-            font-size: 20px;
-        }
-        .navbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #333;
-            padding: 10px;
-            width: 100%;
-            z-index: 1000;
-            border-bottom: 2px solid #FFD700;
-            transition: transform 0.5s ease-in-out;
-        }
-        .navbar-left {
-            display: flex;
-            gap: 10px;
-        }
-        .navbar button {
-            background: transparent;
-            border: none;
-            color: #FFD700;
-            cursor: pointer;
-            font-size: 20px;
-        }
-        .navbar button:hover {
-            color: #fff;
-        }
-        .search-bar {
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-            border-radius: 25px;
-            background-color: #000;
-            border: 2px solid #FFD700;
-            overflow: hidden;
-            height: 30px;
-          margin-left: 20px;
-        }
-        .search-bar input {
-            flex-grow: 1;
-            padding: 10px;
-            border: none;
-            background-color: transparent;
-            color: #ccc;
-            font-size: 16px;
-        }
-        .search-bar input:focus {
-            outline: none;
-        }
-        .search-bar button {
-            background-color: #FFD700;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #000;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            border-radius: 0 25px 25px 0;
-        }
-        .search-bar button i {
-            margin-left: 5px;
-        }
-        .content-wrapper {
-            flex-grow: 1;
-            overflow: hidden;
-            position: relative;
-            height: 100%;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            display: none;
-        }
-        iframe.active {
-            display: block;
-        }
-        .hide-button {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            background-color: transparent;
-            border: none;
-            font-size: 30px;
-            color: #FFD700;
-            cursor: pointer;
-            z-index: 1001;
-        }
-	.navbar.hidden, .tabs.hidden {
-	    transform: translateY(-200%);
-        }
-        .show-navbar-button {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            background-color: transparent;
-            border: none;
-            font-size: 30px;
-            color: white;
-            cursor: pointer;
-            display: none;
-            z-index: 2000;
-        }
-        .show-navbar-button i {
-            color: gold;
-        }
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    font-weight: 500;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #0d1a2b; /* Darker blue background */
+    color: #fff; /* White text color */
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+    background-color: #0a1324; /* Even darker blue for tabs */
+    border-bottom: 2px solid #fff;
+    padding: 4px 12px; /* Halved padding to reduce height */
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Darker shadow */
+    border-radius: 12px 12px 0 0; /* Rounded top corners */
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    padding: 4px 10px; /* Halved padding for the tabs */
+    color: #ccc;
+    cursor: pointer;
+    background-color: #0a1324;
+    border-right: 1px solid #444;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    border-radius: 10px;
+    flex-shrink: 1;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 8px; /* Space between tabs */
+}
+
+.tab.active {
+    background-color: #0a1020; /* Darker blue when active */
+    color: #fff;
+    transform: scale(1.05); /* Slight zoom effect on active tab */
+}
+
+.tab:hover {
+    background-color: #1b2c42; /* Lighter blue on hover */
+    transform: scale(1.03); /* Hover zoom effect */
+}
+
+.tab .close-button {
+    margin-left: 10px;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.tab .close-button:hover {
+    color: #f5f5f5; /* Slightly brighter close button */
+}
+
+.add-tab-button {
+    padding: 4px 10px; /* Halved padding */
+    cursor: pointer;
+    background-color: #0a1324;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.add-tab-button:hover {
+    background-color: #1b2c42;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0a1324; /* Dark blue for navbar */
+    padding: 6px 16px; /* Halved padding to reduce height */
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 2px solid #fff;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Dark shadow for navbar */
+    border-radius: 0 0 12px 12px; /* Rounded bottom corners for navbar */
+}
+
+.navbar-left {
+    display: flex;
+    gap: 14px;
+}
+
+.navbar button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px; /* Slightly smaller icons */
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar button:hover {
+    color: #f5f5f5; /* Lighter white on hover */
+}
+
+.search-bar {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    background-color: #0e192e; /* Darker blue for the search bar */
+    border: 2px solid #fff;
+    overflow: hidden;
+    height: 35px; /* Halved height */
+    margin-left: 20px;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 8px 12px; /* Reduced padding */
+    border: none;
+    background-color: transparent;
+    color: #ccc;
+    font-size: 16px;
+    border-radius: 25px 0 0 25px; /* Rounded left side */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.search-bar input:focus {
+    outline: none;
+    background-color: #1e2a47; /* Slight color change on focus */
+}
+
+.search-bar button {
+    background-color: #fff;
+    border: none;
+    padding: 8px 14px; /* Reduced padding */
+    font-size: 14px; /* Slightly smaller text */
+    color: #1e2a47; /* Dark blue for button text */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 0 25px 25px 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.search-bar button:hover {
+    background-color: #2b3c5d; /* Lighter blue when hovering */
+}
+
+.search-bar button i {
+    margin-left: 5px;
+}
+
+.content-wrapper {
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    height: calc(100% - 80px); /* Increased content space by halving the tab and navbar height */
+    background-color: #0d1a2b; /* Darker blue background */
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: none;
+    border-radius: 15px; /* Rounded corners for iframe */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow around iframe */
+    transition: transform 0.3s ease-in-out;
+}
+
+iframe.active {
+    display: block;
+    transform: scale(1.02); /* Smooth zoom-in effect on active iframe */
+}
+
+.hide-button {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.navbar.hidden, .tabs.hidden {
+    transform: translateY(-200%);
+}
+
+.show-navbar-button {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+    z-index: 2000;
+}
+
+.show-navbar-button i {
+    color: #FFD700; /* Gold color for the show button */
+}
     </style>
 </head>
 <body>
@@ -289,7 +341,7 @@
         const input = document.getElementById('search-input').value.trim();
         const iframe = document.querySelector('.tab-iframe.active');
         if (input) {
-            const url = input.startsWith('http') ? input : `https://google.com/search?q=${encodeURIComponent(input)}`;
+            const url = input.startsWith('http') ? input : `https://duckduckgo.com/${encodeURIComponent(input)}`;
             iframe.src = `/static/embed#${url}`;
         }
     }
