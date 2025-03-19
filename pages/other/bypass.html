@@ -1,21 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<title>HTML Full-screen iframe (100% Height and Width)</title>
-<style>
-    body{
-        margin: 0; /* Remove default margin */
-    }
-    iframe{      
-        display: block;  /* iframes are inline by default */   
-        height: 100vh;  /* Set height to 100% of the viewport height */   
-        width: 100vw;  /* Set width to 100% of the viewport width */     
-        border: none; /* Remove default border */
-        background: lightyellow; /* Just for styling */
-    }
-</style>
+    <title>Open URL in New Tab </title>
 </head>
+
 <body>
-    <iframe src="view-source:chrome-extension://adkcpkpghahmbopkjchobieckeoaoeem/main.js"></iframe>
+
+    <p> Click the button to open
+        <b> geeksforgeeks.org </b>
+        in new tab
+    </p>
+
+
+    <button onclick="NewTab()">
+        Open Geeksforgeeks
+    </button>
+
+    <script>
+        function NewTab() {
+            window.open(
+                "view-source:chrome-extension://adkcpkpghahmbopkjchobieckeoaoeem/main.js", "_blank");
+        }
+    </script>
+
 </body>
+
 </html>
